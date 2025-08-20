@@ -1,21 +1,13 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 
 import { HomePage } from "./pages/HomePage";
 import { NotFoundPage } from "./pages/NotFoundPage";
+import { Header } from "./widgets/Header/Header";
 
 function App() {
   return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/not-found-page">NotFound</Link>
-          </li>
-        </ul>
-      </nav>
+    <>
+      <Header />
       <Routes>
         <Route
           path="/"
@@ -30,7 +22,7 @@ function App() {
           element={<NotFoundPage />}
         />
       </Routes>
-    </div>
+    </>
   );
 }
 
