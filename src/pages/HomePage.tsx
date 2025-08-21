@@ -1,13 +1,12 @@
-
+import { Container } from "@/shared/ui/Container/Container";
 
 interface HomePageProps {
   className?: string;
 }
 export const HomePage = ({ className }: HomePageProps) => {
   return (
-    <div className={`${className ? className : ""}`}>
-
+    <Container className={`${className ? className : ""}`}>
       <div>HomePage</div>
-    </div>
+    </Container>
   );
 };
