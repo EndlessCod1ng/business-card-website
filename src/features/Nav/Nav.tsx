@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { Logo } from "@/shared/ui/Logo";
+import { AppLink } from "@/shared/ui/AppLink/AppLink";
+
 import s from "./Nav.module.scss";
 
 interface NavProps {
@@ -13,15 +13,15 @@ const links = [
   { name: "Projects", link: "/projects" },
   { name: "Contacts", link: "/contacts" },
 ];
+
 export const Nav = ({ className }: NavProps) => {
   return (
     <nav className={`${className ? className : ""} ${s.nav}`}>
-      <Logo />
       <ul>
         {links.map((l) => {
           return (
             <li key={l.link}>
-              <Link to={l.link}>{l.name}</Link>
+              <AppLink to={l.link}>{l.name}</AppLink>
             </li>
           );
         })}

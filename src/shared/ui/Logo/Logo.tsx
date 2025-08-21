@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { AppLink } from "../AppLink/AppLink";
 
 interface LogoProps {
   className?: string;
@@ -8,12 +8,7 @@ export const Logo = ({ className, link = true }: LogoProps) => {
   return (
     <>
       {link ? (
-        <Link
-          className={`${className ? className : ""}`}
-          to="/"
-        >
-          V914
-        </Link>
+        <AppLink className={`${className ? className : ""}`}>V914</AppLink>
       ) : (
         <div className={`${className ? className : ""}`}>V914</div>
       )}

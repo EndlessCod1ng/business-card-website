@@ -1,13 +1,15 @@
 import { Nav } from "@/features/Nav/Nav";
-import { Container } from "@/shared/ui/Container/Container";
+import s from "./Header.module.scss";
+import { Logo } from "@/shared/ui/Logo/Logo";
 
 interface HeaderProps {
   className?: string;
 }
 export const Header = ({ className }: HeaderProps) => {
   return (
-    <Container className={`${className ? className : ""}`}>
+    <header className={`${s.header} ${className ? className : ""}`}>
+      <Logo />
       <Nav />
-    </Container>
+    </header>
   );
 };
