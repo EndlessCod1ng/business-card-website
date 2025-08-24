@@ -21,7 +21,12 @@ export const Nav = ({ className }: NavProps) => {
         {links.map((l) => {
           return (
             <li key={l.link}>
-              <AppLink to={l.link}>{l.name}</AppLink>
+              <AppLink
+                className={s.link}
+                to={l.link}
+              >
+                {l.name}
+              </AppLink>
             </li>
           );
         })}

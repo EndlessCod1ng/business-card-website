@@ -1,5 +1,5 @@
 import { AppLink } from "../AppLink/AppLink";
-
+import s from "./Logo.module.scss";
 interface LogoProps {
   className?: string;
   link?: boolean;
@@ -10,12 +10,13 @@ export const Logo = ({ className, link = true }: LogoProps) => {
       {link ? (
         <AppLink
           colorType="accentedGradient"
-          className={`${className ? className : ""}`}
+          className={`${s.logo} ${className ? className : ""}`}
         >
-          V914
+          <div className={s.top}>Code</div>
+          <div className={s.bottom}>Liberty</div>
         </AppLink>
       ) : (
-        <div className={`${className ? className : ""}`}>V914</div>
+        <div className={`${s.logo} ${className ? className : ""}`}>V914</div>
       )}
     </>
   );
