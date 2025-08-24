@@ -1,3 +1,24 @@
-.appLink {
+.clear {
   text-decoration: none;
+}
+
+.decorated {
+  text-decoration: underline;
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.secondary {
+  color: var(--secondary-color);
+}
+
+.accented {
+  color: var(--accented-color);
+}
+
+.accentedGradient {
+  background-image: var(--accented-gradient);
+  background-clip: text;
 }

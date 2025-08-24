@@ -8,7 +8,12 @@ export const Logo = ({ className, link = true }: LogoProps) => {
   return (
     <>
       {link ? (
-        <AppLink className={`${className ? className : ""}`}>V914</AppLink>
+        <AppLink
+          colorType="accentedGradient"
+          className={`${className ? className : ""}`}
+        >
+          V914
+        </AppLink>
       ) : (
         <div className={`${className ? className : ""}`}>V914</div>
       )}
