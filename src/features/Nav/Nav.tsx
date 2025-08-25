@@ -1,6 +1,7 @@
 import { AppLink } from "@/shared/ui/AppLink/AppLink";
 
 import s from "./Nav.module.scss";
+import { useState } from "react";
 
 interface NavProps {
   className?: string;
@@ -15,9 +16,10 @@ const links = [
 ];
 
 export const Nav = ({ className }: NavProps) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <nav className={`${className ? className : ""} ${s.nav}`}>
-      <ul className={s.list}>
+      <ul className={`${s.list} ${isOpen ? s.isOpen : ""}`}>
         {links.map((l) => {
           return (
             <li key={l.link}>
@@ -31,7 +33,10 @@ export const Nav = ({ className }: NavProps) => {
           );
         })}
       </ul>
-      <div className={s.burgerWrapper}>
+      <div
+        className={`${s.burgerWrapper} ${isOpen ? s.isOpen : ""}`}
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
         <div className={s.burger}></div>
       </div>
     </nav>

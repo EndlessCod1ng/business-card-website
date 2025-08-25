@@ -21,34 +21,36 @@ li {
   padding: 13px 30px;
 }
 
+
 .burgerWrapper {
-  opacity: 0;
-  pointer-events: none;
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+}
 
-  &:hover {
-    .burger {
-      background: transparent;
-    }
+.burgerWrapper.isOpen {
+  .burger {
+    background: transparent;
+  }
 
-    .burger::before,
-    .burger:after {
-      bottom: 0;
-      transform: rotate(45deg)
-    }
+  .burger::before,
+  .burger:after {
+    bottom: 0;
+    transform: rotate(45deg)
+  }
 
-    .burger:after {
-      top: 0;
-      transform: rotate(-45deg)
-    }
+  .burger:after {
+    top: 0;
+    transform: rotate(-45deg)
   }
 }
+
 
 .burger {
   position: relative;
@@ -67,6 +69,7 @@ li {
   height: 4px;
   background-color: var(--primary-color);
   transition: all 0.3s linear;
+  z-index: 1001;
 }
 
 .burger::before {
@@ -89,9 +92,26 @@ li {
   .burgerWrapper {
     opacity: 1;
     pointer-events: auto;
+    width: 40px;
+
   }
+
   .list {
-    opacity: 0;
-    pointer-events: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    top: -100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--bg-color);
+    transition: top .3s linear;
+  }
+
+  .list.isOpen {
+    top: 0;
+    bottom: 0;
   }
 }
