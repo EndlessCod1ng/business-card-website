@@ -17,7 +17,7 @@ const links = [
 export const Nav = ({ className }: NavProps) => {
   return (
     <nav className={`${className ? className : ""} ${s.nav}`}>
-      <ul>
+      <ul className={s.list}>
         {links.map((l) => {
           return (
             <li key={l.link}>
@@ -31,6 +31,9 @@ export const Nav = ({ className }: NavProps) => {
           );
         })}
       </ul>
+      <div className={s.burgerWrapper}>
+        <div className={s.burger}></div>
+      </div>
     </nav>
   );
 };

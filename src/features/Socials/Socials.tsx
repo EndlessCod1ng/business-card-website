@@ -10,7 +10,7 @@ export const Social = ({ className }: SocialsProps) => {
         return (
           <div
             key={social}
-            className={`${s.social}`}
+            className={`${s.socialItem}`}
           >
             {social}
           </div>

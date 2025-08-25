@@ -5,3 +5,17 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.navWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+}
+
+
+@media (max-width:768px) {
+  .navWrapper {
+    // flex-direction: row-reverse;
+  }
+}

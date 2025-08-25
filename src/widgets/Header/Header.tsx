@@ -10,7 +10,7 @@ export const Header = ({ className }: HeaderProps) => {
   return (
     <header className={`${s.header} ${className ? className : ""}`}>
       <Logo />
-      <div>
+      <div className={s.navWrapper}>
         <Nav />
         <Social />
       </div>

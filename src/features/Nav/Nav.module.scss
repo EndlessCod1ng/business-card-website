@@ -1,3 +1,8 @@
+.nav {
+  display: flex;
+  align-items: center;
+}
+
 .nav ul {
   display: flex;
 }
@@ -7,6 +12,86 @@ li {
 
 }
 
+.list {
+  display: flex;
+  align-items: center;
+}
+
 .link {
   padding: 13px 30px;
+}
+
+.burgerWrapper {
+  opacity: 0;
+  pointer-events: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  &:hover {
+    .burger {
+      background: transparent;
+    }
+
+    .burger::before,
+    .burger:after {
+      bottom: 0;
+      transform: rotate(45deg)
+    }
+
+    .burger:after {
+      top: 0;
+      transform: rotate(-45deg)
+    }
+  }
+}
+
+.burger {
+  position: relative;
+  content: "";
+  width: 30px;
+  height: 4px;
+  background-color: var(--primary-color);
+  transition: all 0.3s linear;
+}
+
+.burger::before,
+.burger:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background-color: var(--primary-color);
+  transition: all 0.3s linear;
+}
+
+.burger::before {
+  bottom: 8px;
+}
+
+.burger::after {
+  top: 8px;
+}
+
+
+
+@media (max-width:992px) {
+  .link {
+    padding: 13px 15px;
+  }
+}
+
+@media (max-width:768px) {
+  .burgerWrapper {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .list {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
