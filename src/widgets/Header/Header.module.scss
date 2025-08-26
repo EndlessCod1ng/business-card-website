@@ -4,6 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+
+  margin: 0 auto;
+  max-width: 1230px;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .navWrapper {

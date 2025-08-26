@@ -8,13 +8,13 @@
 }
 
 .imageWrapper {
+  position: relative;
   content: "";
   width: 360px;
   height: 360px;
   border-radius: 50%;
   background: var(--accented-gradient);
   transform: rotate(-90deg);
-  position: relative;
 }
 
 .img {
@@ -27,4 +27,11 @@
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
+}
+
+@media (max-width:768px) {
+  .banner {
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
 }
