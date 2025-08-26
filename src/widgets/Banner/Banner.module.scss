@@ -1,0 +1,30 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 444px;
+  height: calc(100vh - var(--header-height));
+}
+
+.imageWrapper {
+  content: "";
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: var(--accented-gradient);
+  transform: rotate(-90deg);
+  position: relative;
+}
+
+.img {
+  position: absolute;
+  content: "";
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
