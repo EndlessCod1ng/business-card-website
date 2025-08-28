@@ -5,7 +5,7 @@ interface StackProps {
 }
 export const Stack = ({ className }: StackProps) => {
   return (
-    <div className={`${s.stack} ${className ? className : ""}`}>
+    <section className={`${s.stack} ${className ? className : ""}`}>
       <AppText
         Tag="h2"
         text="Tech Stack"
@@ -14,7 +14,14 @@ export const Stack = ({ className }: StackProps) => {
         Tag="h3"
         text="Technologies I’ve been working with recently"
       />
-      <div className={s.stackList}>Array("")</div>
-    </div>
+      <div className={s.stackList}>
+        {[...new Array(12).fill("_")].map((_, i) => (
+          <div
+            className={s.stackItem}
+            key={i}
+          ></div>
+        ))}
+      </div>
+    </section>
   );
 };

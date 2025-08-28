@@ -4,7 +4,7 @@ interface BannerProps {
 }
 export const Banner = ({ className }: BannerProps) => {
   return (
-    <div className={`${s.banner} ${className ? className : ""}`}>
+    <section className={`${s.banner} ${className ? className : ""}`}>
       <div>
         <div>Hi, My name is</div>
         <div>Viacheslav L.C.</div>
@@ -13,6 +13,6 @@ export const Banner = ({ className }: BannerProps) => {
       <div className={s.imageWrapper}>
         <div className={s.img}></div>
       </div>
-    </div>
+    </section>
   );
 };
