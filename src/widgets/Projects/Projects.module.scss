@@ -1,0 +1,16 @@
+.projects {
+  text-align: center;
+}
+
+.projectsList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: var(--content-indent);
+}
+
+.projctsItem {
+  width: calc(100%/3);
+  margin-bottom: 65px;
+}

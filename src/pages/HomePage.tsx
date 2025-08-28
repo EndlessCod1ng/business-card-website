@@ -1,4 +1,5 @@
 import { Banner } from "@/widgets/Banner/Banner";
+import { Projects } from "@/widgets/Projects/Projects";
 import { Stack } from "@/widgets/Stack/Stack";
 
 interface HomePageProps {
@@ -9,6 +10,7 @@ export const HomePage = ({ className }: HomePageProps) => {
     <div className={`${className ? className : ""}`}>
       <Banner />
       <Stack />
+      <Projects />
     </div>
   );
 };
