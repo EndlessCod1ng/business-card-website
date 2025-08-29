@@ -1,5 +1,11 @@
 .projects {
-  text-align: center;
+  & h3 {
+    text-align: center;
+  }
+
+  & h4 {
+    text-align: center;
+  }
 }
 
 .projectsList {
@@ -21,6 +27,10 @@
 
 .content {
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 307px;
 }
 
 .img {
@@ -29,4 +39,37 @@
   min-height: 260px;
   background: var(--accented-gradient);
   border-radius: 25px 25px 0 0;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.description {
+  margin-bottom: 12px;
+  min-height: 130px;
+}
+
+.tags {
+  margin-bottom: 20px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ico {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: var(--accented-gradient);
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
 }

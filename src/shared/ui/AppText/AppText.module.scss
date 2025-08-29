@@ -1,0 +1,9 @@
+.primary {
+  color: var(--primary-color);
+}
+
+.accentedGradient {
+  color: transparent;
+  background-image: var(--accented-gradient);
+  background-clip: text;
+}

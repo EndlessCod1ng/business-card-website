@@ -1,6 +1,13 @@
 .stack {
   min-height: 500px;
-  text-align: center;
+
+  & h3 {
+    text-align: center;
+  }
+
+  & h4 {
+    text-align: center;
+  }
 }
 
 .stackList {
