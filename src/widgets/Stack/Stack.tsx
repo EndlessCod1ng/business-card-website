@@ -7,11 +7,11 @@ export const Stack = ({ className }: StackProps) => {
   return (
     <section className={`${s.stack} ${className ? className : ""}`}>
       <AppText
-        Tag="h2"
+        Tag="h3"
         text="Tech Stack"
       />
       <AppText
-        Tag="h3"
+        Tag="h4"
         text="Technologies I’ve been working with recently"
       />
       <div className={s.stackList}>
