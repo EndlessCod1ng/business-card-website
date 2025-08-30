@@ -3,7 +3,7 @@ interface SocialsProps {
   className?: string;
 }
 const socialNetworks = ["g", "tw", "in"];
-export const Social = ({ className }: SocialsProps) => {
+export const Socials = ({ className }: SocialsProps) => {
   return (
     <div className={`${s.socials} ${className ? className : ""}`}>
       {socialNetworks.map((social) => {

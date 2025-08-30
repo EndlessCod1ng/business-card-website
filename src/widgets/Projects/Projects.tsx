@@ -6,7 +6,7 @@ interface ProjectsProps {
 }
 export const Projects = ({ className }: ProjectsProps) => {
   return (
-    <div className={`${s.projects} ${className ? className : ""}`}>
+    <section className={`${s.projects} ${className ? className : ""}`}>
       <AppText
         Tag="h3"
         text="Projects"
@@ -66,6 +66,6 @@ export const Projects = ({ className }: ProjectsProps) => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };

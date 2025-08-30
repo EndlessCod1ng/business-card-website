@@ -1,7 +1,7 @@
 import { Nav } from "@/features/Nav/Nav";
 import s from "./Header.module.scss";
 import { Logo } from "@/shared/ui/Logo/Logo";
-import { Social } from "@/features/Socials/Socials";
+import { Socials } from "@/features/Socials/Socials";
 
 interface HeaderProps {
   className?: string;
@@ -12,7 +12,7 @@ export const Header = ({ className }: HeaderProps) => {
       <Logo />
       <div className={s.navWrapper}>
         <Nav />
-        <Social />
+        <Socials />
       </div>
     </header>
   );
