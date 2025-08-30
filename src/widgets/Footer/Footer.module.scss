@@ -1,5 +1,10 @@
 .footer {
   width: 100%;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: var(--content-indent);
 }
 
 .top {
@@ -10,6 +15,19 @@
 
 .info {
   width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background: var(--line-color);
+  opacity: 0.3;
+}
+
+.bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;

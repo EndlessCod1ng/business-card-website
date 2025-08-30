@@ -2,6 +2,7 @@ import { Logo } from "@/shared/ui/Logo/Logo";
 import s from "./Footer.module.scss";
 import { AppText } from "@/shared/ui/AppText/AppText";
 import { Socials } from "@/features/Socials/Socials";
+import { Nav } from "@/features/Nav/Nav";
 interface FooterProps {
   className?: string;
 }
@@ -16,7 +17,40 @@ export const Footer = ({ className }: FooterProps) => {
           <Socials />
         </div>
       </div>
-      <div className={s.bottom}></div>
+      <div className={s.line} />
+      <div className={s.bottom}>
+        <Nav />
+        <div>
+          <AppText
+            Tag="span"
+            text="Designed and built by "
+          />
+    
+          <AppText
+            Tag="span"
+            colorType="accentedGradient"
+            text="Viacheslav MG "
+          />
+          <AppText
+            Tag="span"
+            text="with "
+          />
+          <AppText
+            Tag="span"
+            colorType="accentedGradient"
+            text="Love "
+          />
+          <AppText
+            Tag="span"
+            text="& "
+          />
+          <AppText
+            Tag="span"
+            colorType="accentedGradient"
+            text="Coffee"
+          />
+        </div>
+      </div>
     </footer>
   );
 };
