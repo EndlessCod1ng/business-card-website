@@ -2,6 +2,18 @@
   color: var(--primary-color);
 }
 
+h2.primary {
+  color: var(--tertiary-color);
+}
+
+h3.primary {
+  color: var(--tertiary-color);
+}
+
+h5.primary {
+  color: var(--secondary-color);
+}
+
 .accentedGradient {
   background-image: var(--accented-gradient);
   color: transparent;
