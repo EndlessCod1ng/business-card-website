@@ -1,3 +1,4 @@
+import { AppLink } from "@/shared/ui/AppLink/AppLink";
 import s from "./Socials.module.scss";
 interface SocialsProps {
   className?: string;
@@ -8,12 +9,12 @@ export const Socials = ({ className }: SocialsProps) => {
     <div className={`${s.socials} ${className ? className : ""}`}>
       {socialNetworks.map((social) => {
         return (
-          <div
+          <AppLink
             key={social}
             className={`${s.socialItem}`}
           >
             {social}
-          </div>
+          </AppLink>
         );
       })}
     </div>

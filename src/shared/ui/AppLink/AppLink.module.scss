@@ -3,16 +3,12 @@
 }
 
 .primary {
-  color: var(--primary-color);
+  color: var(--link-color);
   transition: all linear var(--transition-duration);
 
   &:hover {
     color: var(--accented-color);
   }
-}
-
-.secondary {
-  color: var(--secondary-color);
 }
 
 .accented {
@@ -23,4 +19,8 @@
   background-image: var(--accented-gradient);
   background-clip: text;
   transition: all linear var(--transition-duration);
+
+  &:hover {
+    color: var(--primary-color);
+  }
 }

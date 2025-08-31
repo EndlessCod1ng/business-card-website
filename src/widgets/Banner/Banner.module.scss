@@ -5,6 +5,8 @@
 
   min-height: 444px;
   height: calc(100vh - var(--header-height));
+
+  margin-top: var(--content-indent);
 }
 
 .imageWrapper {

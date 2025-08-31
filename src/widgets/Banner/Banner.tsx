@@ -9,9 +9,14 @@ export const Banner = ({ className }: BannerProps) => {
       <div>
         <AppText
           Tag="h2"
-          text="Hi, My name is"
+          text="Hi 👋"
         />
         <AppText
+          Tag="h2"
+          text="My name is"
+        />
+        <AppText
+          colorType="accentedGradient"
           Tag="h2"
           text="Viacheslav L.C."
         />

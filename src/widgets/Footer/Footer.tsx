@@ -29,7 +29,7 @@ export const Footer = ({ className }: FooterProps) => {
           <AppText
             Tag="span"
             colorType="accentedGradient"
-            text="Viacheslav MG "
+            text="Viacheslav L.C."
           />
           <AppText
             Tag="span"
