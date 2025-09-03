@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { createContext, useEffect, useState, type ReactNode } from "react";
 
 interface ThemeProviderProps {
   children: ReactNode;
@@ -6,6 +6,7 @@ interface ThemeProviderProps {
 
 type Theme = "dark" | "light";
 const LOCALSTORAGE_THEME_KEY = "theme";
+const ThemeContext = createContext({});
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [theme, setTheme] = useState<Theme>(
@@ -19,5 +20,9 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     setTheme(newTheme);
     localStorage.setItem(LOCALSTORAGE_THEME_KEY, newTheme);
   };
-  return <>{children}</>;
+  return (
+    <ThemeContext value={{ theme: theme, changeTheme: changeTheme }}>
+      {children}
+    </ThemeContext>
+  );
 };
