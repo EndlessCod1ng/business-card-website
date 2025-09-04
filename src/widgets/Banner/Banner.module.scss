@@ -12,23 +12,35 @@
 .imageWrapper {
   position: relative;
   content: "";
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  background: var(--accented-gradient);
-  transform: rotate(-90deg);
+  width: 340px;
+  height: 340px;
+  z-index: 2;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    border-radius: 50%;
+    background: var(--accented-gradient);
+    z-index: 1;
+    transform: rotate(-90deg);
+  }
 }
 
 .img {
   position: absolute;
   content: "";
-  width: 350px;
-  height: 350px;
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
   background: var(--bg-color);
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
+  z-index: 3;
 }
 
 @media (max-width:768px) {
