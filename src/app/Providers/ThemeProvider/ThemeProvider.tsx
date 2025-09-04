@@ -1,12 +1,27 @@
-import { createContext, useEffect, useState, type ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  type ReactNode,
+} from "react";
 
 interface ThemeProviderProps {
   children: ReactNode;
 }
+interface ThemeContextProps {
+  theme?: Theme;
+  changeTheme?: () => void;
+}
 
 type Theme = "dark" | "light";
 const LOCALSTORAGE_THEME_KEY = "theme";
-const ThemeContext = createContext({});
+
+export const ThemeContext = createContext<ThemeContextProps>({});
+export const useTheme = (): ThemeContextProps => {
+  const { theme, changeTheme } = useContext(ThemeContext);
+  return { theme, changeTheme };
+};
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [theme, setTheme] = useState<Theme>(
@@ -21,8 +36,8 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     localStorage.setItem(LOCALSTORAGE_THEME_KEY, newTheme);
   };
   return (
-    <ThemeContext value={{ theme: theme, changeTheme: changeTheme }}>
+    <ThemeContext.Provider value={{ theme: theme, changeTheme: changeTheme }}>
       {children}
-    </ThemeContext>
+    </ThemeContext.Provider>
   );
 };

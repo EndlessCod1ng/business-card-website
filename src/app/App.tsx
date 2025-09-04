@@ -4,26 +4,20 @@ import { HomePage } from "@/pages/HomePage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
 import { Header } from "@/widgets/Header/Header";
 import { Container } from "@/shared/ui/Container/Container";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Footer } from "@/widgets/Footer/Footer";
+import { useTheme } from "./Providers/ThemeProvider/ThemeProvider";
 
-type Theme = "dark" | "light";
-const LOCALSTORAGE_THEME_KEY = "theme";
 function App() {
-  const [theme, setTheme] = useState<Theme>(
-    (localStorage.getItem(LOCALSTORAGE_THEME_KEY) as Theme) || "dark"
-  );
+  const { theme: contextTheme, changeTheme: changeContextTheme } = useTheme();
+
   useEffect(() => {
-    document.body.classList = `app_${theme}_theme`;
-  }, [theme]);
-  const changeTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    localStorage.setItem(LOCALSTORAGE_THEME_KEY, newTheme);
-  };
+    document.body.classList = `app_${contextTheme}_theme`;
+  }, [contextTheme]);
+
   return (
     <>
-      <Header changeTheme={() => changeTheme()} />
+      <Header changeTheme={() => changeContextTheme?.()} />
       <Container className="main">
         <main>
           <Routes>
