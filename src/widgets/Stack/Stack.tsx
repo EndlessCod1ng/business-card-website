@@ -1,9 +1,35 @@
 import { AppText } from "@/shared/ui/AppText/AppText";
 import s from "./Stack.module.scss";
 import HtmlIcon from "@/shared/assets/icons/html.svg";
+import CssIcon from "@/shared/assets/icons/css.svg";
+import JsIcon from "@/shared/assets/icons/js.svg";
+import ReactIcon from "@/shared/assets/icons/react.svg";
+import ReduxIcon from "@/shared/assets/icons/redux.svg";
+import BootstrapIcon from "@/shared/assets/icons/bootstrap.svg";
+import TailwindIcon from "@/shared/assets/icons/tailwind.svg";
+import SassIcon from "@/shared/assets/icons/sass.svg";
+import GitIcon from "@/shared/assets/icons/git.svg";
+import GreensockIcon from "@/shared/assets/icons/greensock.svg";
+import VscodeIcon from "@/shared/assets/icons/vscode.svg";
+import GithubIcon from "@/shared/assets/icons/github.svg";
+// import { AppIcon } from "@/shared/ui/AppIcon/AppIcon";
 interface StackProps {
   className?: string;
 }
+const stackList = [
+  HtmlIcon,
+  CssIcon,
+  JsIcon,
+  ReactIcon,
+  ReduxIcon,
+  BootstrapIcon,
+  TailwindIcon,
+  SassIcon,
+  GitIcon,
+  GreensockIcon,
+  VscodeIcon,
+  GithubIcon,
+];
 export const Stack = ({ className }: StackProps) => {
   return (
     <section className={`${s.stack} ${className ? className : ""}`}>
@@ -17,12 +43,11 @@ export const Stack = ({ className }: StackProps) => {
       />
 
       <div className={s.stackList}>
-        <HtmlIcon />
-        {[...new Array(12).fill(<HtmlIcon />)].map((_, i) => (
-          <div
+        {stackList.map((StackItem) => (
+          <StackItem
+            key={StackItem}
             className={s.stackItem}
-            key={i}
-          ></div>
+          />
         ))}
       </div>
     </section>
