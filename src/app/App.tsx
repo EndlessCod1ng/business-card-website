@@ -6,14 +6,15 @@ import { Header } from "@/widgets/Header/Header";
 import { Container } from "@/shared/ui/Container/Container";
 import { useEffect } from "react";
 import { Footer } from "@/widgets/Footer/Footer";
-import { useTheme } from "./Providers/ThemeProvider/ThemeProvider";
+import { useTheme } from "./providers/context/ThemeContext";
+
 
 function App() {
-  const { theme: contextTheme, changeTheme: changeContextTheme } = useTheme();
+  const { theme, changeTheme: changeContextTheme } = useTheme();
 
   useEffect(() => {
-    document.body.classList = `app_${contextTheme}_theme`;
-  }, [contextTheme]);
+    document.body.classList = `app_${theme}_theme`;
+  }, [theme]);
 
   return (
     <>

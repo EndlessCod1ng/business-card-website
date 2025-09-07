@@ -27,15 +27,15 @@
   position: relative;
   margin-bottom: 80px;
 
-  &::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    content: "";
-    min-width: 120px;
-    min-height: 120px;
-    border-radius: 35px;
-    background: var(--accented-color);
-  }
+  // &::after {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate3d(-50%, -50%, 0);
+  //   content: "";
+  //   min-width: 120px;
+  //   min-height: 120px;
+  //   border-radius: 35px;
+  //   background: var(--accented-color);
+  // }
 }
