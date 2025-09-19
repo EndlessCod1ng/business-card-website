@@ -12,6 +12,7 @@ import GitIcon from "@/shared/assets/icons/git.svg";
 import GreensockIcon from "@/shared/assets/icons/greensock.svg";
 import VscodeIcon from "@/shared/assets/icons/vscode.svg";
 import GithubIcon from "@/shared/assets/icons/github.svg";
+import { AppIcon } from "@/shared/ui/AppIcon/AppIcon";
 // import { AppIcon } from "@/shared/ui/AppIcon/AppIcon";
 interface StackProps {
   className?: string;
@@ -43,9 +44,10 @@ export const Stack = ({ className }: StackProps) => {
       />
 
       <div className={s.stackList}>
-        {stackList.map((StackItem) => (
-          <StackItem
-            key={StackItem}
+        {stackList.map((stackI) => (
+          <AppIcon
+            Svg={stackI}
+            key={stackI}
             className={s.stackItem}
           />
         ))}

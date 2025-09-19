@@ -1,7 +1,7 @@
-import type { ReactNode } from "react";
+import type { FC, SVGProps } from "react";
 
 interface AppIconProps {
-  Svg: ReactNode;
+  Svg: FC<SVGProps<SVGSVGElement>> | string;
   className?: string;
   viewBox?: string;
   width?: string;
